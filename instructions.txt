@@ -1,0 +1,30 @@
+1.The task was to read customer code form the file customer_file.csv, than find that code in the customer.csv database
+get that row and write it in a new customer.csv databese.(do that to all 1000 customer codes from customer_file.csv)
+
+2.Than read customer code form the file customer_file.csv, find that code in the invoice.csv database get that row and
+write it in a new invoice.csv databese.(do that to all 1000 customer codes from customer_file.csv)
+
+2.Than read invoice code form the new invoice file (made in step 2) New_invoice.csv, find that code in the
+invoice_item.csv database get that row and write it in a new invoice_item.csv databese.
+(do that to all invoice codes in the new invoice file)
+
+In find_data_func.py there is a function find_data that finds the wanted data for each of these steps.
+Because the task was to do these steps in this order there is another function in find_data_func.py called
+make_new_databases that calls the function find_data three times. The function has one parameter name1.
+In the parameter name1 is stored the name of the csv file with customer codes that we want to find in the other files.
+(The make_new_databases function can be used only when the three files customer.csv, invoice.csv and invoice_item.csv
+are in the python project file)
+In the find_data function in find_data_func there is only one try block for the name1, because the other names are
+already written in the make_new_databases function.
+
+The task can be done from main_program.py just with writing the name of the file with the customer codes
+so the input has to be customer_file.csv.
+
+There are two more python files in this project
+find_data_finally.py that contains the same function find_data that does the same thing but you can use it on any two
+databases, even on a databases that are not in the python project folder.
+
+finding_data_withCSV.py contains the function make_new_data. In this file is used inport csv. This function can be used
+with any two database,even on a databases that are not in the python project folder.
+
+You can find the explanation about the find_data function comments in find_data_finally.py and finding_data_withCSV.py

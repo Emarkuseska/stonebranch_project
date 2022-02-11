@@ -52,6 +52,7 @@ def find_data(data1, data2):
                                         # checking if we have a invoice code match
                                         d3w.write(d2line)
                                         # writing the row where invoice code match was found in the new database
+                            print("New database done")
                     # printing different messages for different errors
                     except PermissionError:
                         print(f"You have no permission to open {data3}, the csv file might be already opened.")
@@ -73,6 +74,11 @@ find_data("New_invoice.csv", "invoice_item.csv")
 """If the csv files are not in the python project folder
 than we call the function with the stings of the path of the files as parameters.
 The paths can be put in variables first"""
-name = str(r'C:\Users\Emilija\Desktop\stonebranch\dcustomer_file.csv')
+name1 = str(r'C:\Users\Emilija\Desktop\stonebranch\dcustomer_file.csv')
 name2 = str(r'C:\Users\Emilija\Desktop\stonebranch\dinvoice.csv')
-find_data(name, name2)
+find_data(name1, name2)
+# using input so the user can write the names of the two databases
+print("insert names of two databases in format name.csv:")
+name_one = input("insert name for the first database:")
+name_two = input("insert name for the second database:")
+find_data(name_one, name_two)
