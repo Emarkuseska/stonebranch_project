@@ -6,9 +6,9 @@ write it in a new invoice.csv databese.(do that to all 1000 customer codes from 
 
 2.Than read invoice code form the new invoice file (made in step 2) New_invoice.csv, find that code in the
 invoice_item.csv database get that row and write it in a new invoice_item.csv databese.
-(do that to all invoice codes in the new invoice file)
+(do that to all invoice codes from the new invoice file)
 
-In find_data_func.py there is a function find_data that finds the wanted data for each of these steps.
+In find_data_func.py there is a function find_data that finds the wanted data and adds it to a new database.
 Because the task was to do these steps in this order there is another function in find_data_func.py called
 make_new_databases that calls the function find_data three times. The function has one parameter name1.
 In the parameter name1 is stored the name of the csv file with customer codes that we want to find in the other files.
@@ -21,10 +21,10 @@ The task can be done from main_program.py just with writing the name of the file
 so the input has to be customer_file.csv.
 
 There are two more python files in this project
-find_data_finally.py that contains the same function find_data that does the same thing but you can use it on any two
-databases, even on a databases that are not in the python project folder.
+find_data_finally.py that contains the same function find_data that does the same thing but you can use it with any two
+databases, even with databases that are not in the python project folder.
 
 finding_data_withCSV.py contains the function make_new_data. In this file is used inport csv. This function can be used
-with any two database,even on a databases that are not in the python project folder.
+with any two database,even with databases that are not in the python project folder.
 
-You can find the explanation about the find_data function comments in find_data_finally.py and finding_data_withCSV.py
+You can find the explanation of the find_data function in the comments in find_data_finally.py and finding_data_withCSV.py

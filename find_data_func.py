@@ -27,11 +27,12 @@ def find_data(data1,data2):
     except FileNotFoundError:
         print("You have a mistake in the name that you entered")
 
+
 def make_new_databases(name1):
-    find_data(name1,"customer.csv")
+    find_data(name1, "customer.csv")
     # calling the function to find the customer info of the 1000 selected customers in the customer database
-    find_data(name1,"invoice.csv")
+    find_data(name1, "invoice.csv")
     # calling the function to find the invoice info of the 1000 selected customers in the invoice database
-    find_data("New_invoice.csv","invoice_item.csv")
+    find_data("New_invoice.csv", "invoice_item.csv")
     # calling the function to find the invoice item info of the invoices
     # of the 1000 selected customers in the new invoice
