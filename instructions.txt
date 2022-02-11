@@ -14,8 +14,9 @@ make_new_databases that calls the function find_data three times. The function h
 In the parameter name1 is stored the name of the csv file with customer codes that we want to find in the other files.
 (The make_new_databases function can be used only when the three files customer.csv, invoice.csv and invoice_item.csv
 are in the python project file)
-In the find_data function in find_data_func there is only one try block for the name1, because the other names are
-already written in the make_new_databases function.
+In the find_data function in find_data_func there is one try block for catching name errors for the name1,
+because the other names are already written in the make_new_databases function. And one try block for the writing part
+to catch an error if there is no permission for writing.
 
 The task can be done from main_program.py just with writing the name of the file with the customer codes
 so the input has to be customer_file.csv.
